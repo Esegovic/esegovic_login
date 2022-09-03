@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Esegovic</title>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="https://kit.fontawesome.com/16bcf16a73.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="container">
+			<img src="img/bg.jpg" id="background">
+			<div id="main-ui"></div>
+				<div id="login-register-shit">
+					<div id="button-section">
+						<div id="login"><span id="1" class="active">login</span></div>
+						<div id="register"><span id="2">register</span></div>
+					</div>
+					<div id="line"></div>
+					<div id="login-site">
+						<div id="login-user">
+							<div id="login-user-icon"><img src="img/username.png"></div>
+							<input type="input" placeholder="Name" id='login-username' required />
+  							<label for="name" class="form__label">Username</label>
+						</div>
+						<div id="login-password">
+							<div id="login-password-icon"><img src="img/password.png"></div>
+							<input type="password" placeholder="Password" id='login-pass' required />
+  							<label for="name" class="form__label">Password</label>
+						</div>
+						<div id="login-button">login</div>
+						<div id="password-forgot">Forgot Password?</div>
+					</div>
+					<div id="register-site">
+						<div id="reigster-user">
+							<div id="login-user-icon"><img src="img/username.png"></div>
+							<input type="input" placeholder="Name" id='register-username' required />
+  							<label>Username</label>
+						</div>
+						<div id="register-password">
+							<div id="login-password-icon"><img src="img/password.png"></div>
+							<input type="password" placeholder="Password" id='register-pass' required />
+  							<label>Password</label>
+						</div>
+						<div id="key-password">
+							<div id="login-password-icon"><img src="img/key.png"></div>
+							<span id="secretkey"></span>
+							<label>Secret Key</label>
+							<div id="hint">Copy-Paste Secret Key on your computer. Its an backup once you forgot your password.</div>
+						</div>
+						<div id="register-button">register</div>
+					</div>
+					<div id="forgot-password-site">
+						<div id="enter-secret-key">
+							<div id="login-password-icon"><img src="img/key.png"></div>
+							<label>Please Enter Secret Key</label>
+							<input type="input" placeholder="Your Secret Key" id='sKey' required />
+							<div id="hint2">If You dont remember your secret key please delete Account.</div>
+						</div>
+						<div id="delete-account">delete account</div>
+						<div id="reset-pass">reset</div>
+					</div>
+				</div>
+
+				<div id="notify">
+					<img src="img/msg.png">
+					<span id="notify-message"></span>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

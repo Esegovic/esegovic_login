@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans&family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  line-height: 1;
+}
+
+:root {
+  --mainColor: #ff5959;
+  --secondColor: #e6e6e6;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  display: none;
+  background-color: black;
+  z-index: 9999999999999;
+}
+#background {
+  width: 100%;
+  -webkit-filter: blur(2px);
+  filter:blur(2px);
+  opacity: 0.2;
+}
+#container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#main-ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  background: -webkit-linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  background: -moz-linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  background: -ms-linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  background: -o-linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  background: linear-gradient(45deg, rgba(97, 4, 4, 0.777) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(12, 5, 110, 0.747) 93%);
+  opacity: 0.1;
+}
+
+#login-register-shit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 25%;
+  height: 60%;
+  border-width: 0.1vw;
+  border-style: solid;
+  border-image: linear-gradient(12deg, rgba(199, 199, 199, 0) , rgba(128, 128, 128, 0.3));
+  border-image-slice: 1;
+  transition: .3s;
+  background-color: rgba(255, 255, 255, 0.041);
+}
+
+#button-section {
+  width: 100%;
+  height: 15%;
+  display: flex;
+}
+#login {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#register {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login span, #register span {
+  opacity: 0.5;
+  padding: 0.3vw;
+  width: auto;
+  border-bottom: 0.1vw solid var(--mainColor);
+  text-align: center;
+  color: var(--secondColor);
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.active {
+  opacity: 0.9!important;
+}
+
+#login-site{
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  height: 85%;
+  width: 70%;
+}
+#register-site, #forgot-password-site {
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  height: 85%;
+  width: 70%;
+}
+
+#login-user, #reigster-user {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#login-password, #register-password {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#key-password {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#login-button {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: #ff59597c;
+  color: var(--secondColor);
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+}
+
+#register-button {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: #ff59597c;
+  color: var(--secondColor);
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+}
+#register-button:hover, #login-button:hover, #reset-pass:hover, #delete-account:hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 1s;
+  border-top-right-radius: 0.3vw;
+  border-bottom-right-radius: 0.3vw;
+}
+label {
+  position: absolute;
+  top: -50%;
+  left: 1%;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--secondColor);
+  opacity: 0.6;
+}
+
+input {
+  padding: 0.3vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-family: 'Comfortaa', cursive;
+  color: var(--secondColor);
+}
+
+#login-user-icon img, #login-password-icon img{
+  width: 50%;
+  opacity: 0.7;
+}
+
+#login-user-icon, #login-password-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 0.3vw;
+  border-bottom-left-radius: 0.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#password-forgot:hover {
+  opacity: 1;
+  transition: .3s;
+}
+#password-forgot {
+  position: absolute;
+  bottom: 45%;
+  right: 1%;
+  font-size: 0.6vw;
+  color: var(--mainColor);
+  font-family: 'Comfortaa', cursive;
+  opacity: 0.5;
+  transition: .3s;
+  cursor: pointer;
+}
+
+#secretkey {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.3vw;
+  font-family: 'Comfortaa', cursive;
+  color: var(--secondColor);
+  opacity: 0.5;
+}
+
+#hint, #hint2 {
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  left: 5%;
+  font-family: 'Comfortaa', cursive;
+  color: var(--mainColor);
+  opacity: 0.6;
+  font-size: 0.4vw;
+}
+
+#line {
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  width: 80%;
+  border-bottom: 1px solid var(--secondColor);
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+#notify {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%,5%);
+  width: 20%;
+  height: 7%;
+  border-radius: 0.3vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+#notify img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%,-50%);
+  width: 23px;
+  opacity: 0.8;
+}
+#notify-message {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondColor);
+  opacity: 0.7;
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.6vw;
+}
+
+#enter-secret-key {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#reset-pass {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: #59ff597c;
+  color: var(--secondColor);
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+}
+
+#delete-account {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 0.3vw;
+  background-color: #ff59597c;
+  color: var(--secondColor);
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+}
