@@ -14,11 +14,10 @@ _Func.CheckLenght = function (str, lenght)
     return false
 end
 
-AddEventHandler('playerSpawned', function()
+Citizen.CreateThread(function()
+    while not NetworkIsSessionStarted() do Wait(0) end
     SetNuiFocus(true, true)
-    SendNUIMessage({ 
-        event = 'login'
-    })
+    SendNUIMessage({event = 'login'})
 end)
 
 RegisterNUICallback("close", function()
